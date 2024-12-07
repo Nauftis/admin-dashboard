@@ -73,19 +73,144 @@ h6 {
     --blue: rgb(35, 167, 243);
 }
 
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
 .sidebar {
     background-color: var(--blue);
     color: white;
 }
 
-.cards,
+.projectCard,
 .currentAnnouncements,
 .trends {
     background-color: white;
 }
 
+.header {
+    grid-area: 1 / 2 / 2 / 6;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px 40px;
+    height: 1rem;
+}
+
+.firstBar {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: center;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    height: 2rem;
+    gap: 10px;
+    padding: 0px 20px 0px 0px;
+    align-items: center;
+
+    input {
+        flex-grow: 1;
+        border-radius: 50px;
+        padding: 10px;
+        height: 1rem;
+    }
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#search,
+.notifications {
+    height: 1rem;
+}
+
+.secondBar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.hiUser {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.profilePicBig {
+    grid-area: 1 / 1 / 3 / 2;
+    height: 3rem;
+}
+
+.profilePicSmall {
+    height: 2.3rem;
+}
+
+.accountName {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.hiThere {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / 5 / 2;
+}
+
 .main {
-    background-color: azure;
+    background-color: rgb(241, 241, 241);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.projectCard,
+.trends,
+.currentAnnouncements {
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.announcement {
+    padding-bottom: 15px;
+}
+
+hr {
+    margin-bottom: 15px;
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+
+    .userName,
+    .phrase {
+        font-size: 14px;
+    }
+
+}
+
+.trend .profilePicSmall {
+    grid-area: 1 / 1 / 3 / 2;
 }
 
 #new,
@@ -96,4 +221,8 @@ h6 {
     width: 80px;
     border: none;
     border-radius: 50px;
+}
+
+ul {
+    list-style-type: none
 }
